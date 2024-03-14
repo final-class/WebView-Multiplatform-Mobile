@@ -42,7 +42,7 @@ kotlin {
             implementation(compose.components.uiToolingPreview)
 
             /** WebView Multiplatform Mobile **/
-            implementation(projects.shared)
+            implementation(projects.library)
         }
     }
 }
@@ -80,4 +80,3 @@ android {
         debugImplementation(libs.compose.ui.tooling)
     }
 }
-

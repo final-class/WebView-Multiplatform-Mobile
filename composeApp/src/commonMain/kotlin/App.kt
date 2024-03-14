@@ -21,6 +21,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.final_class.webview_multiplatform_mobile.library.WebViewPlatform
+import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidWebViewModifier
+import com.final_class.webview_multiplatform_mobile.library.settings.android.activityHeight
+import com.final_class.webview_multiplatform_mobile.library.settings.android.share.ShareState
+import com.final_class.webview_multiplatform_mobile.library.settings.android.shareState
+import com.final_class.webview_multiplatform_mobile.library.settings.android.showTitle
+import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosWebViewModifier
+import com.final_class.webview_multiplatform_mobile.library.settings.ios.dismissButtonStyle
+import com.final_class.webview_multiplatform_mobile.library.settings.ios.dismiss_button_style.DismissButtonStyle
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
@@ -86,9 +94,7 @@ fun App() {
         if (openWebView) {
             openWebView = false
 
-            WebViewPlatform(
-                url = url
-            )
+            WebViewPlatform(url = url)
         }
     }
 }

@@ -17,5 +17,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "WebView_Multiplatform_Mobile"
-include(":shared")
+include(":library")
 include(":composeApp")
