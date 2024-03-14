@@ -19,7 +19,7 @@ jobs:
           java-version: 17
 
       - name: Build Shared
-        run: ./gradlew shared:assemble
+        run: ./gradlew library:assemble
 
         # Runs upload, and then closes & releases the repository
       - name: Publish to MavenCentral
