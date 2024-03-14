@@ -26,12 +26,12 @@ internal actual fun WebViewPlatformImpl(
     url: String,
     androidSettings: AndroidSettings,
     iosSettings: IosSettings,
-    onClose: () -> Unit
+    onClose: (() -> Unit)?
 ) {
     // Преобразование url в NSURL
     val nsurl = remember { NSURL(string = url) }
 
-    // Конфигурация для SFSafariViewController (в моём случае не используется)
+    // Конфигурация для SFSafariViewController
     val configuration = remember { SFSafariViewControllerConfiguration() }
 
     iosSettings.barCollapsingEnabled?.let { configuration.setBarCollapsingEnabled(it) }
@@ -51,17 +51,14 @@ internal actual fun WebViewPlatformImpl(
         factory = {
             viewController?.presentViewController(safariController, animated = true, completion = null)
 
-            // Делаем кнопку "Закрыть"
-            safariController.dismissButtonStyle = SFSafariViewControllerDismissButtonStyle.SFSafariViewControllerDismissButtonStyleDone
-
             // Загружаем View
             viewController?.loadView()
 
             // Возвращаем View
-            viewController?.view() ?: safariController.view()
+            safariController.view()
         },
         onRelease = {
-            onClose.invoke()
+            onClose?.invoke()
         }
     )
 }

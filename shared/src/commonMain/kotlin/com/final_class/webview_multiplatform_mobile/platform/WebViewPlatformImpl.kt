@@ -14,5 +14,5 @@ internal expect fun WebViewPlatformImpl(
     url: String,
     androidSettings: AndroidSettings,
     iosSettings: IosSettings,
-    onClose: () -> Unit
+    onClose: (() -> Unit)?
 )

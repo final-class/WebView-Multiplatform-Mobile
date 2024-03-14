@@ -36,11 +36,11 @@ internal actual fun WebViewPlatformImpl(
     url: String,
     androidSettings: AndroidSettings,
     iosSettings: IosSettings,
-    onClose: () -> Unit
+    onClose: (() -> Unit)?
 ) {
     val context = LocalContext.current
     val customTabsContract = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        onClose.invoke()
+        onClose?.invoke()
     }
 
     val customTabsIntent = remember { createCustomTabs(context = context, androidSettings = androidSettings) }

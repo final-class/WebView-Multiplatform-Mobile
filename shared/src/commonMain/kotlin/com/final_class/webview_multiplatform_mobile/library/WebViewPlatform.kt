@@ -17,7 +17,7 @@ fun WebViewPlatform(
     url: String,
     androidSettings: AndroidWebViewModifier = AndroidSettings(),
     iosSettings: IosWebViewModifier = IosSettings(),
-    onClose: () -> Unit
+    onClose: (() -> Unit)? = null
 ) {
     WebViewPlatformImpl(
         modifier = modifier,

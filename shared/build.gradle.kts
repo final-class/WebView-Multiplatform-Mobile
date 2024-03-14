@@ -30,15 +30,15 @@ kotlin {
     sourceSets {
         commonMain.dependencies {
             /** Compose **/
-            implementation(compose.runtime)
+//            implementation(compose.runtime)
             implementation(compose.foundation)
-            implementation(compose.material)
-            implementation(compose.ui)
+//            implementation(compose.material)
+//            implementation(compose.ui)
         }
 
         androidMain.dependencies {
             /** Compose **/
-            implementation(libs.compose.ui.tooling.preview)
+//            implementation(libs.compose.ui.tooling.preview)
             implementation(libs.androidx.activity.compose)
 
             /** CustomTabs **/
