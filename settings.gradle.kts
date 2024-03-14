@@ -18,4 +18,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "WebView_Multiplatform_Mobile"
 include(":library")
-include(":composeApp")
+include(":sample")
