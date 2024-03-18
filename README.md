@@ -87,7 +87,7 @@ Method  | Description
 
 ------------
 
-### :man_technologist: Вклад
-Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
+### :man_technologist: Contribution
+We welcome your contributions! If you have suggestions for improvement or have encountered any issues, please create an Issue or Pull Request on our GitHub repository.
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&pause=1000&color=F7B72A&vCenter=true&random=false&width=435&lines=by+Final+Class)](https://github.com/final-class)
