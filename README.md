@@ -92,3 +92,7 @@ Method  | Description
 Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&pause=1000&color=F7B72A&vCenter=true&random=false&width=435&lines=by+Final+Class)](https://git.io/typing-svg)
+
+https://github.com/final-class
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&pause=1000&color=F7B72A&vCenter=true&random=false&width=435&lines=by+Final+Class)](https://github.com/final-class)
