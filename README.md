@@ -4,15 +4,14 @@
 
 <h1 align="center">WebView Multiplatform Mobile</h1>
 
+**WebView Multiplatform Mobile** is a cross-platform library that provides a simple and convenient way to embed web content into your Android and iOS applications. Based on [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) in Android and [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) in iOS, the library ensures safe and fast interaction with web content while maintaining the native user interface and performance.
 
-**WebView Multiplatform Mobile** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, библиотека обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
+>[Here's an example of how WebView looks](https://github.com/final-class/WebView-Multiplatform-Mobile#iphone-example)
 
->[Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile#iphone-example)
-
-### :fire: Особенности:
-- **Мультиплатформенная совместимость:** Поддержка Android и iOS для обеспечения единого опыта встраивания веб-содержимого.
-- **Интеграция с CustomTabs (Android) и SFSafariViewController (iOS):** Используйте стандартные компоненты каждой платформы для оптимальной производительности и безопасности.
-- **Простота использования:** Интуитивный интерфейс API делает встраивание веб-содержимого легким и эффективным для разработчиков, а настройки для каждой платформы вдохновлены философией Compose Modifier из Jetpack Compose.
+### :fire: Features:
+- **Cross-platform compatibility:** Support for Android and iOS to ensure a unified web content embedding experience.
+- **Integration with CustomTabs (Android) and SFSafariViewController (iOS):** Utilize standard components of each platform for optimal performance and security.
+- **Ease of use:** An intuitive API interface makes embedding web content easy and efficient for developers, with settings for each platform inspired by the Compose Modifier philosophy from Jetpack Compose.
 
 ------------
 
