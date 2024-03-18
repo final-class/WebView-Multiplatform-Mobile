@@ -77,11 +77,13 @@ preferredControlTintColor  | the color to tint the control buttons on the naviga
 
 ------------
 
-### Вклад
-Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
-
 ### Example
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
 
 ![](https://imgur.com/VzCepMA.png) ![](https://imgur.com/YzVZ5sU.png)
+
+------------
+
+### Вклад
+Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
