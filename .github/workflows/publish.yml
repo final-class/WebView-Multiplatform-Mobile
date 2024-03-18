@@ -18,7 +18,7 @@ jobs:
           distribution: adopt
           java-version: 17
 
-      - name: Build Shared
+      - name: Build Library
         run: ./gradlew library:assemble
 
         # Runs upload, and then closes & releases the repository
