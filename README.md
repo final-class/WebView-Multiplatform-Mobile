@@ -2,7 +2,11 @@
 
 **WebViewX** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, WebViewX обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
 
-Пример того, как выглядит WebView [Heading link](https://github.com/final-class/WebView-Multiplatform-Mobile/readme.md "Пример")
+ [Пример того, как выглядит WebView]([https://github.com/final-class/WebView-Multiplatform-Mobile/readme.md "Example"](https://github.com/final-class/WebView-Multiplatform-Mobile?tab=readme-ov-file#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80))
+
+ https://github.com/final-class/WebView-Multiplatform-Mobile?tab=readme-ov-file#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80
+
+###Пример
 
 ### Особенности:
 - **Мультиплатформенная совместимость:** Поддержка Android и iOS для обеспечения единого опыта встраивания веб-содержимого.
@@ -80,7 +84,7 @@ preferredControlTintColor  | the color to tint the control buttons on the naviga
 ### Вклад
 Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
 
-### Пример
+### Example
 
 [![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
 
