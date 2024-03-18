@@ -4,8 +4,6 @@
 
 [Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile?tab=readme-ov-file#example)
 
-###Пример
-
 ### Особенности:
 - **Мультиплатформенная совместимость:** Поддержка Android и iOS для обеспечения единого опыта встраивания веб-содержимого.
 - **Интеграция с CustomTabs (Android) и SFSafariViewController (iOS):** Используйте стандартные компоненты каждой платформы для оптимальной производительности и безопасности.
