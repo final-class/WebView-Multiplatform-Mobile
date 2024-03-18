@@ -2,7 +2,7 @@
 
 **WebView Multiplatform Mobile** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, библиотека обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
 
->[Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile?tab=readme-ov-file#:iphone:example)
+>[Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile#iphone-example)
 
 ### :fire: Особенности:
 - **Мультиплатформенная совместимость:** Поддержка Android и iOS для обеспечения единого опыта встраивания веб-содержимого.
