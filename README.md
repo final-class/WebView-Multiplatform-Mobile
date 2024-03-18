@@ -58,7 +58,7 @@ Method  | Description
 **darkColorSchemeParams**  | Sets the dark CustomTabColorSchemeParams. This will set a dark color scheme that applies when AndroidScheme.Dark specified for current color scheme via scheme.
 
 
-#### Настройки для iOS устанавливаются следующим образом:
+#### Settings for iOS are configured as follows:
 ```kotlin
 WebViewPlatform(
     url = "https://github.com/",
@@ -69,7 +69,7 @@ WebViewPlatform(
 )
 ```
 
-**Описание имеющихся настроек для IosWebViewModifier**
+**Description of available settings for IosWebViewModifier**
                     
 Method  | Description
 ------------- | -------------
