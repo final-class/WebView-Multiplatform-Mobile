@@ -15,12 +15,12 @@
 
 ------------
 
-### :rocket: Подключение
-1) Добавьте зависимость в commonMain вашего build.gradle
+### :rocket: Setup
+1) Add the dependency to the commonMain section of your build.gradle
 ```java
 implementation("io.github.final-class:webview-multiplatform-mobile:1.0.1")
 ```
-2) Используйте WebView в своем общем коде
+2) Use WebView in your shared code
 ```kotlin
 WebViewPlatform(url = "https://github.com/")
 ```
