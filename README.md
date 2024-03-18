@@ -31,8 +31,47 @@ WebViewPlatform(
     androidSettings = AndroidWebViewModifier
         .showTitle(true)
         .urlBarHidingEnabled(true)
+        ...
 )
 ```
+**Описание имеющихся настроек для AndroidWebViewModifier**
+                    
+Method  | Description
+------------- | -------------
+showTitle  | Sets whether the title should be shown in the custom tab.
+urlBarHidingEnabled  | Set whether the url bar should hide as the user scrolls down on the page.
+shareState  | Sets the share state that should be applied to the custom tab.
+instantAppsEnabled  | Sets whether Instant Apps is enabled for this Custom Tab.
+toolbarCornerRadiusDp  | Sets the toolbar's top corner radii in dp.
+activityHeight  | Sets the Custom Tab Activity's initial height in pixels and the desired resize behavior.
+closeButtonPosition  | Sets the position of the close button.
+startAnimations  | Sets the start animations.
+exitAnimations  | Sets the exit animations.
+scheme  | Sets the color scheme that should be applied to the user interface in the custom tab.
+defaultColorSchemeParams  | Sets the default CustomTabColorSchemeParams. This will set a default color scheme that applies when no AndroidScheme specified for current color scheme via scheme.
+darkColorSchemeParams  | Sets the dark CustomTabColorSchemeParams. This will set a dark color scheme that applies when AndroidScheme.Dark specified for current color scheme via scheme.
+
+
+#### Настройки для iOS устанавливаются следующим образом:
+```
+WebViewPlatform(
+    url = "https://github.com/",
+    iosSettings = IosWebViewModifier
+        .barCollapsingEnabled(true)
+        .entersReaderIfAvailable(true)
+        ...
+)
+```
+
+**Описание имеющихся настроек для IosWebViewModifier**
+                    
+Method  | Description
+------------- | -------------
+barCollapsingEnabled  | enabled bar collapsing.
+entersReaderIfAvailable  | a value that specifies whether Safari should enter Reader mode, if it is available.
+dismissButtonStyle  | sets dismiss button style.
+preferredBarTintColor  | the color to tint the background of the navigation bar and the toolbar.
+preferredControlTintColor  | the color to tint the control buttons on the navigation bar and the toolbar.
 
 ------------
 
