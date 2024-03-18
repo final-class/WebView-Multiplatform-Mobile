@@ -13,11 +13,11 @@
 
 ### :rocket: Подключение
 1) Добавьте зависимость в commonMain вашего build.gradle
-```
+```kotlin
 implementation("io.github.final-class:webview-multiplatform-mobile:1.0.1")
 ```
 2) Используйте WebView в своем общем коде
-```
+```kotlin
 WebViewPlatform(url = "https://github.com/")
 ```
 
