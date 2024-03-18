@@ -27,10 +27,10 @@ WebViewPlatform(url = "https://github.com/")
 
 ------------
 
-### :gear: Настройки
-WebView Multiplatform Mobile предоставляет ряд настраиваемых параметров для оптимизации поведения и внешнего вида ваших встроенных веб-компонентов, которые вдохновлены философией Compose Modifier в Jetpack Compose. Каждая настройка WebView похожа на применение Modifier к встроенному веб-компоненту, что делает их использование элегантным и удобным.
+### :gear: Settings
+WebView Multiplatform Mobile provides a range of customizable parameters to optimize the behavior and appearance of your embedded web components, inspired by the Compose Modifier philosophy in Jetpack Compose. Each WebView setting is akin to applying a Modifier to the embedded web component, making their usage elegant and convenient.
 
-#### Настройки для Android устанавливаются следующим образом:
+#### Settings for Android are configured as follows:
 ```kotlin
 WebViewPlatform(
     url = "https://github.com/",
@@ -40,7 +40,7 @@ WebViewPlatform(
         ...
 )
 ```
-**Описание имеющихся настроек для AndroidWebViewModifier**
+**Description of available settings for AndroidWebViewModifier**
                     
 Method  | Description
 ------------- | -------------
