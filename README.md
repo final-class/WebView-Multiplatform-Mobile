@@ -1,6 +1,6 @@
 # :globe_with_meridians: WebView Multiplatform Mobile
 
-**WebViewX** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, WebViewX обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
+**WebView Multiplatform Mobile** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, библиотека обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
 
 [Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile?tab=readme-ov-file#:iphone:example)
 
@@ -24,7 +24,7 @@ WebViewPlatform(url = "https://github.com/")
 ------------
 
 ### :gear: Настройки
-WebViewX предоставляет ряд настраиваемых параметров для оптимизации поведения и внешнего вида ваших встроенных веб-компонентов, которые вдохновлены философией Compose Modifier в Jetpack Compose. Каждая настройка WebViewX похожа на применение Modifier к встроенному веб-компоненту, что делает их использование элегантным и удобным.
+WebView Multiplatform Mobile предоставляет ряд настраиваемых параметров для оптимизации поведения и внешнего вида ваших встроенных веб-компонентов, которые вдохновлены философией Compose Modifier в Jetpack Compose. Каждая настройка WebView похожа на применение Modifier к встроенному веб-компоненту, что делает их использование элегантным и удобным.
 
 #### Настройки для Android устанавливаются следующим образом:
 ```
