@@ -53,7 +53,7 @@ android {
 }
 
 mavenPublishing {
-    val version = "1.0.1"
+    val version = "1.0.2"
     val groupId = "io.github.final-class"
     val artifact = "webview-multiplatform-mobile"
 

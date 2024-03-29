@@ -1,8 +1,8 @@
 package com.final_class.webview_multiplatform_mobile.platform
 
 import android.content.Context
-import androidx.activity.compose.rememberLauncherForActivityResult
-import androidx.activity.result.contract.ActivityResultContracts
+import android.content.Intent
+import android.net.Uri
 import androidx.browser.customtabs.CustomTabColorSchemeParams
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.browser.customtabs.CustomTabsIntent.ACTIVITY_HEIGHT_ADJUSTABLE
@@ -12,12 +12,8 @@ import androidx.browser.customtabs.CustomTabsIntent.CLOSE_BUTTON_POSITION_DEFAUL
 import androidx.browser.customtabs.CustomTabsIntent.CLOSE_BUTTON_POSITION_END
 import androidx.browser.customtabs.CustomTabsIntent.CLOSE_BUTTON_POSITION_START
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.remember
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import androidx.core.net.toUri
 import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidSettings
 import com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height.ActivityHeight
 import com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height.HeightResizeBehavior
@@ -29,26 +25,23 @@ import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosSett
 
 @Composable
 internal actual fun WebViewPlatformImpl(
-    modifier: Modifier,
     url: String,
+    openInExternalBrowser: Boolean,
     androidSettings: AndroidSettings,
     iosSettings: IosSettings,
-    onClose: (() -> Unit)?
 ) {
     val context = LocalContext.current
-    val customTabsContract = rememberLauncherForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        onClose?.invoke()
-    }
 
-    val customTabsIntent = remember { createCustomTabs(context = context, androidSettings = androidSettings) }
+    val customTabsIntent = createCustomTabs(
+        context = context,
+        androidSettings = androidSettings,
+        openInExternalBrowser = openInExternalBrowser
+    )
 
-    LaunchedEffect(Unit) {
-        val intent = customTabsIntent.intent.apply { data = url.toUri() }
-        customTabsContract.launch(intent)
-    }
+    customTabsIntent.launchUrl(context, Uri.parse(url))
 }
 
-private fun createCustomTabs(context: Context, androidSettings: AndroidSettings): CustomTabsIntent {
+private fun createCustomTabs(context: Context, androidSettings: AndroidSettings, openInExternalBrowser: Boolean): CustomTabsIntent {
     val customTabsBuilder = CustomTabsIntent.Builder()
 
     androidSettings.showTitle?.let { customTabsBuilder.setShowTitle(it) }
@@ -64,7 +57,9 @@ private fun createCustomTabs(context: Context, androidSettings: AndroidSettings)
     androidSettings.defaultColorSchemeParams?.let { customTabsBuilder.setDefaultColorSchemeParams(it) }
     androidSettings.darkColorSchemeParams?.let { customTabsBuilder.setDarkColorSchemeParams(it) }
 
-    return customTabsBuilder.build()
+    return customTabsBuilder.build().apply {
+        if (openInExternalBrowser) intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+    }
 }
 
 private fun CustomTabsIntent.Builder.setShareState(shareState: ShareState) {

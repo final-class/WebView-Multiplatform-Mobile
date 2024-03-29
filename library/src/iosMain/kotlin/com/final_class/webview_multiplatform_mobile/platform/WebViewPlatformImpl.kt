@@ -1,14 +1,10 @@
 package com.final_class.webview_multiplatform_mobile.platform
 
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.remember
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.interop.UIKitView
 import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidSettings
 import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosSettings
 import com.final_class.webview_multiplatform_mobile.library.settings.ios.dismiss_button_style.DismissButtonStyle
-import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSURL
 import platform.SafariServices.SFSafariViewController
 import platform.SafariServices.SFSafariViewControllerConfiguration
@@ -16,48 +12,46 @@ import platform.SafariServices.SFSafariViewControllerDismissButtonStyle
 import platform.UIKit.UIApplication
 import platform.UIKit.UIColor
 
-@OptIn(ExperimentalForeignApi::class)
 @Composable
 internal actual fun WebViewPlatformImpl(
-    modifier: Modifier,
     url: String,
+    openInExternalBrowser: Boolean,
     androidSettings: AndroidSettings,
     iosSettings: IosSettings,
-    onClose: (() -> Unit)?
 ) {
-    // Преобразование url в NSURL
-    val nsurl = remember { NSURL(string = url) }
-
-    // Конфигурация для SFSafariViewController
-    val configuration = remember { SFSafariViewControllerConfiguration() }
-
-    iosSettings.barCollapsingEnabled?.let { configuration.setBarCollapsingEnabled(it) }
-    iosSettings.entersReaderIfAvailable?.let { configuration.setEntersReaderIfAvailable(it) }
-
-    // Safari контроллер (это и есть бразуер Сафари внутри приложения)
-    val safariController = remember { SFSafariViewController(uRL = nsurl, configuration = configuration) }
-
-    iosSettings.dismissButtonStyle?.let { safariController.setDismissButtonStyle(it) }
-    iosSettings.preferredBarTintColor?.let { safariController.setPreferredBarTintColor(it.toUIColor()) }
-    iosSettings.preferredControlTintColor?.let { safariController.setPreferredControlTintColor(it.toUIColor()) }
-
-    val viewController = remember { UIApplication.sharedApplication.keyWindow?.rootViewController }
-
-    UIKitView(
-        modifier = modifier,
-        factory = {
-            viewController?.presentViewController(safariController, animated = true, completion = null)
-
-            // Загружаем View
-            viewController?.loadView()
-
-            // Возвращаем View
-            safariController.view()
-        },
-        onRelease = {
-            onClose?.invoke()
-        }
+    val nsurl = NSURL(string = url)
+    val safariConfiguration = createSafariConfiguration(iosSettings = iosSettings)
+    val safariViewController = createSafariViewController(
+        url = nsurl,
+        configuration = safariConfiguration,
+        iosSettings = iosSettings
     )
+
+    if (openInExternalBrowser) {
+        UIApplication.sharedApplication.openURL(url = nsurl)
+    } else {
+        val viewController = UIApplication.sharedApplication.keyWindow?.rootViewController
+        viewController?.presentViewController(safariViewController, animated = true, completion = null)
+    }
+}
+
+private fun createSafariViewController(
+    url: NSURL,
+    configuration: SFSafariViewControllerConfiguration,
+    iosSettings: IosSettings
+): SFSafariViewController {
+    return SFSafariViewController(uRL = url, configuration = configuration).apply {
+        iosSettings.dismissButtonStyle?.let { setDismissButtonStyle(it) }
+        iosSettings.preferredBarTintColor?.let { setPreferredBarTintColor(it.toUIColor()) }
+        iosSettings.preferredControlTintColor?.let { setPreferredControlTintColor(it.toUIColor()) }
+    }
+}
+
+private fun createSafariConfiguration(iosSettings: IosSettings): SFSafariViewControllerConfiguration {
+    return SFSafariViewControllerConfiguration().apply {
+        iosSettings.barCollapsingEnabled?.let { setBarCollapsingEnabled(it) }
+        iosSettings.entersReaderIfAvailable?.let { setEntersReaderIfAvailable(it) }
+    }
 }
 
 private fun SFSafariViewController.setDismissButtonStyle(dismissButtonStyle: DismissButtonStyle) {

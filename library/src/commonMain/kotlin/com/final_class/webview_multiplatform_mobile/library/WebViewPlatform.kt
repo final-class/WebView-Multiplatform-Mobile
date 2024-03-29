@@ -1,7 +1,6 @@
 package com.final_class.webview_multiplatform_mobile.library
 
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidSettings
 import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidWebViewModifier
 import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosSettings
@@ -9,25 +8,22 @@ import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosWebV
 import com.final_class.webview_multiplatform_mobile.platform.WebViewPlatformImpl
 
 /**
- * @param modifier a Modifier for this WebView
  * @param url url to open WebView
+ * @param openInExternalBrowser open in external browser
  * @param androidSettings settings for Android
- * @param iosSettings settings for iOS
- * @param onClose the callback that is triggered when the WebView on close
+ * @param iosSettings settings for iOS (The settings are not applied when the openInExternalBrowser value is set to true)
  * **/
 @Composable
 fun WebViewPlatform(
-    modifier: Modifier = Modifier,
     url: String,
+    openInExternalBrowser: Boolean = false,
     androidSettings: AndroidWebViewModifier = AndroidSettings(),
     iosSettings: IosWebViewModifier = IosSettings(),
-    onClose: (() -> Unit)? = null
 ) {
     WebViewPlatformImpl(
-        modifier = modifier,
         url = url,
+        openInExternalBrowser = openInExternalBrowser,
         androidSettings = androidSettings.provide(),
         iosSettings = iosSettings.provide(),
-        onClose = onClose
     )
 }

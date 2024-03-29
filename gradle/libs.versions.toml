@@ -7,7 +7,7 @@ android-targetSdk = "34"
 compose = "1.6.2"
 compose-plugin = "1.6.1"
 androidx-activityCompose = "1.8.0"
-customTabsAndroid = "1.5.0"
+customTabsAndroid = "1.8.0"
 material = "1.11.0"
 maven-publish = "0.28.0"
 
