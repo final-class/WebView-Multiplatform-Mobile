@@ -1,37 +1,36 @@
 <p align="center">
-  <img width="200" height="200" src="https://imgur.com/BxcninF.png">
+  <img width="200" height="200" src="static/logo.png">
 </p>
 
+<h1 align="center">WebView Multiplatform Mobile</h1>
 
-# :globe_with_meridians: WebView Multiplatform Mobile
+**WebView Multiplatform Mobile** is a cross-platform library that provides a simple and convenient way to embed web content into your Android and iOS applications. Based on [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) in Android and [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) in iOS, the library ensures safe and fast interaction with web content while maintaining the native user interface and performance.
 
-**WebView Multiplatform Mobile** - это мультиплатформенная библиотека, которая обеспечивает простой и удобный способ встраивания веб-содержимого в ваши приложения для Android и iOS. Основанная на [CustomTabs](https://developer.android.com/reference/kotlin/androidx/browser/customtabs/package-summary) в Android и [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) в iOS, библиотека обеспечивает безопасное и быстрое взаимодействие с веб-содержимым, сохраняя при этом нативный пользовательский интерфейс и производительность.
+>[Here's an example of how WebView looks](https://github.com/final-class/WebView-Multiplatform-Mobile#iphone-example)
 
->[Пример того, как выглядит WebView](https://github.com/final-class/WebView-Multiplatform-Mobile#iphone-example)
-
-### :fire: Особенности:
-- **Мультиплатформенная совместимость:** Поддержка Android и iOS для обеспечения единого опыта встраивания веб-содержимого.
-- **Интеграция с CustomTabs (Android) и SFSafariViewController (iOS):** Используйте стандартные компоненты каждой платформы для оптимальной производительности и безопасности.
-- **Простота использования:** Интуитивный интерфейс API делает встраивание веб-содержимого легким и эффективным для разработчиков, а настройки для каждой платформы вдохновлены философией Compose Modifier из Jetpack Compose.
+### :fire: Features:
+- **Cross-platform compatibility:** Support for Android and iOS to ensure a unified web content embedding experience.
+- **Integration with CustomTabs (Android) and SFSafariViewController (iOS):** Utilize standard components of each platform for optimal performance and security.
+- **Ease of use:** An intuitive API interface makes embedding web content easy and efficient for developers, with settings for each platform inspired by the Compose Modifier philosophy from Jetpack Compose.
 
 ------------
 
-### :rocket: Подключение
-1) Добавьте зависимость в commonMain вашего build.gradle
+### :rocket: Setup
+1) Add the dependency to the commonMain section of your build.gradle
 ```java
 implementation("io.github.final-class:webview-multiplatform-mobile:1.0.1")
 ```
-2) Используйте WebView в своем общем коде
+2) Use WebView in your shared code
 ```kotlin
 WebViewPlatform(url = "https://github.com/")
 ```
 
 ------------
 
-### :gear: Настройки
-WebView Multiplatform Mobile предоставляет ряд настраиваемых параметров для оптимизации поведения и внешнего вида ваших встроенных веб-компонентов, которые вдохновлены философией Compose Modifier в Jetpack Compose. Каждая настройка WebView похожа на применение Modifier к встроенному веб-компоненту, что делает их использование элегантным и удобным.
+### :gear: Settings
+WebView Multiplatform Mobile provides a range of customizable parameters to optimize the behavior and appearance of your embedded web components, inspired by the Compose Modifier philosophy in Jetpack Compose. Each WebView setting is akin to applying a Modifier to the embedded web component, making their usage elegant and convenient.
 
-#### Настройки для Android устанавливаются следующим образом:
+#### Settings for Android are configured as follows:
 ```kotlin
 WebViewPlatform(
     url = "https://github.com/",
@@ -41,7 +40,7 @@ WebViewPlatform(
         ...
 )
 ```
-**Описание имеющихся настроек для AndroidWebViewModifier**
+**Description of available settings for AndroidWebViewModifier**
                     
 Method  | Description
 ------------- | -------------
@@ -59,7 +58,7 @@ Method  | Description
 **darkColorSchemeParams**  | Sets the dark CustomTabColorSchemeParams. This will set a dark color scheme that applies when AndroidScheme.Dark specified for current color scheme via scheme.
 
 
-#### Настройки для iOS устанавливаются следующим образом:
+#### Settings for iOS are configured as follows:
 ```kotlin
 WebViewPlatform(
     url = "https://github.com/",
@@ -70,7 +69,7 @@ WebViewPlatform(
 )
 ```
 
-**Описание имеющихся настроек для IosWebViewModifier**
+**Description of available settings for IosWebViewModifier**
                     
 Method  | Description
 ------------- | -------------
@@ -84,11 +83,11 @@ Method  | Description
 
 ### :iphone: Example
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?lines=First+line+of+text;Second+line+of+text)](https://git.io/typing-svg)
-
 ![](https://imgur.com/VzCepMA.png) ![](https://imgur.com/YzVZ5sU.png)
 
 ------------
 
-### :man_technologist: Вклад
-Мы приветствуем ваши вклады! Если у вас есть предложения по улучшению или обнаружили проблемы, пожалуйста, создайте Issue или Pull Request на нашем GitHub репозитории.
+### :man_technologist: Contribution
+We welcome your contributions! If you have suggestions for improvement or have encountered any issues, please create an Issue or Pull Request on our GitHub repository.
+
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=12&pause=1000&color=F7B72A&vCenter=true&random=false&width=435&lines=by+Final+Class)](https://github.com/final-class)
