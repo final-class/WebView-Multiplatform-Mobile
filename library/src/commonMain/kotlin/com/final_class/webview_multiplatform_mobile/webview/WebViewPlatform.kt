@@ -26,7 +26,6 @@ fun WebViewPlatform(
     }
 
     webViewController.consume()
-    println("consumed")
 }
 
 @Composable
@@ -36,9 +35,6 @@ internal fun OpenWebView(
     androidSettings: AndroidWebViewModifier = AndroidSettings(),
     iosSettings: IosWebViewModifier = IosSettings(),
 ) {
-    println("OpenWebView -> url: $url")
-    println("OpenWebView -> openInExternalBrowser: $openInExternalBrowser")
-
     WebViewPlatformImpl(
         url = url,
         openInExternalBrowser = openInExternalBrowser,
