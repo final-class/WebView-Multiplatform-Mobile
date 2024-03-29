@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.close_button_position
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.close_button_position
 
 enum class CloseButtonPosition {
     /** Same as CLOSE_BUTTON_POSITION_START. **/

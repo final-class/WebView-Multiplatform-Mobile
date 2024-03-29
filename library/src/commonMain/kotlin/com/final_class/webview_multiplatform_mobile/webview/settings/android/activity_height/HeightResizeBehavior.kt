@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.activity_height
 
 enum class HeightResizeBehavior {
     /** Applies the default height resize behavior for the Custom Tab Activity when it behaves as a bottom sheet. **/

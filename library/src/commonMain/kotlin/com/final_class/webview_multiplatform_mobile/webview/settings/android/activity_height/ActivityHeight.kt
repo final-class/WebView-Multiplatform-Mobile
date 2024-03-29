@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.activity_height
 
 /**
  * @param initialHeightPx the Custom Tab Activity's initial height in pixels.

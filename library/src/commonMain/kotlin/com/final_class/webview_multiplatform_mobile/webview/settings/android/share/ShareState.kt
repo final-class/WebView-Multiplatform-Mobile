@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.share
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.share
 
 enum class ShareState {
     /** Applies the default share settings depending on the browser. **/
