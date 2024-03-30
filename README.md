@@ -22,7 +22,11 @@ implementation("io.github.final-class:webview-multiplatform-mobile:1.0.1")
 ```
 2) Use WebView in your shared code
 ```kotlin
-WebViewPlatform(url = "https://github.com/")
+val webViewController by rememberWebViewController()
+
+WebViewPlatform(webViewController = webViewController)
+
+webViewController.open(url = "https://github.com/")
 ```
 
 ------------
@@ -32,8 +36,10 @@ WebView Multiplatform Mobile provides a range of customizable parameters to opti
 
 #### Settings for Android are configured as follows:
 ```kotlin
+val webViewController by rememberWebViewController()
+
 WebViewPlatform(
-    url = "https://github.com/",
+    webViewController = webViewController,
     androidSettings = AndroidWebViewModifier
         .showTitle(true)
         .urlBarHidingEnabled(true)
@@ -60,8 +66,10 @@ Method  | Description
 
 #### Settings for iOS are configured as follows:
 ```kotlin
+val webViewController by rememberWebViewController()
+
 WebViewPlatform(
-    url = "https://github.com/",
+    webViewController = webViewController,
     iosSettings = IosWebViewModifier
         .barCollapsingEnabled(true)
         .entersReaderIfAvailable(true)
