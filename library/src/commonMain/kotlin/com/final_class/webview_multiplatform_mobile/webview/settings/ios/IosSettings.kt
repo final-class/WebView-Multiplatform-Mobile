@@ -1,7 +1,7 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.ios
+package com.final_class.webview_multiplatform_mobile.webview.settings.ios
 
 import androidx.compose.ui.graphics.Color
-import com.final_class.webview_multiplatform_mobile.library.settings.ios.dismiss_button_style.DismissButtonStyle
+import com.final_class.webview_multiplatform_mobile.webview.settings.ios.dismiss_button_style.DismissButtonStyle
 
 data class IosSettings(
     var barCollapsingEnabled: Boolean? = null,

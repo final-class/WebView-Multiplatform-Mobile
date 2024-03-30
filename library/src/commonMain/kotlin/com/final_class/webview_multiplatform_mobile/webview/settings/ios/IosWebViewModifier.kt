@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.ios
+package com.final_class.webview_multiplatform_mobile.webview.settings.ios
 
 
 interface IosWebViewModifier {

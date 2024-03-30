@@ -1,11 +1,11 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android
+package com.final_class.webview_multiplatform_mobile.webview.settings.android
 
-import com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height.ActivityHeight
-import com.final_class.webview_multiplatform_mobile.library.settings.android.android_scheme_colors.ColorSchemeParams
-import com.final_class.webview_multiplatform_mobile.library.settings.android.animation.AndroidAnimations
-import com.final_class.webview_multiplatform_mobile.library.settings.android.close_button_position.CloseButtonPosition
-import com.final_class.webview_multiplatform_mobile.library.settings.android.scheme.AndroidScheme
-import com.final_class.webview_multiplatform_mobile.library.settings.android.share.ShareState
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.activity_height.ActivityHeight
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.android_scheme_colors.ColorSchemeParams
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.animation.AndroidAnimations
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.close_button_position.CloseButtonPosition
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.scheme.AndroidScheme
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.share.ShareState
 
 /**
  * @param show sets whether the title should be shown in the custom tab.

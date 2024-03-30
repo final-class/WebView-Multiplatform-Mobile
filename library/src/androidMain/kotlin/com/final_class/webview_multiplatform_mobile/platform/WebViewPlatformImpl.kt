@@ -14,14 +14,14 @@ import androidx.browser.customtabs.CustomTabsIntent.CLOSE_BUTTON_POSITION_START
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidSettings
-import com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height.ActivityHeight
-import com.final_class.webview_multiplatform_mobile.library.settings.android.activity_height.HeightResizeBehavior
-import com.final_class.webview_multiplatform_mobile.library.settings.android.android_scheme_colors.ColorSchemeParams
-import com.final_class.webview_multiplatform_mobile.library.settings.android.close_button_position.CloseButtonPosition
-import com.final_class.webview_multiplatform_mobile.library.settings.android.scheme.AndroidScheme
-import com.final_class.webview_multiplatform_mobile.library.settings.android.share.ShareState
-import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosSettings
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.AndroidSettings
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.activity_height.ActivityHeight
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.activity_height.HeightResizeBehavior
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.android_scheme_colors.ColorSchemeParams
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.close_button_position.CloseButtonPosition
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.scheme.AndroidScheme
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.share.ShareState
+import com.final_class.webview_multiplatform_mobile.webview.settings.ios.IosSettings
 
 @Composable
 internal actual fun WebViewPlatformImpl(

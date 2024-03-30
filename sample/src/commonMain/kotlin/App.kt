@@ -24,18 +24,23 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.final_class.webview_multiplatform_mobile.library.WebViewPlatform
+import com.final_class.webview_multiplatform_mobile.webview.WebViewPlatform
+import com.final_class.webview_multiplatform_mobile.webview.controller.rememberWebViewController
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun App() {
     MaterialTheme {
+        val webViewController by rememberWebViewController()
+
         var openWebView by remember {
             mutableStateOf(false)
         }
         var url by remember {
             mutableStateOf("https://github.com/final-class/WebView-Multiplatform-Mobile")
         }
+
+        WebViewPlatform(webViewController = webViewController)
 
         Column(
             modifier = Modifier.fillMaxSize(),
@@ -81,16 +86,12 @@ fun App() {
                     .fillMaxWidth()
                     .padding(top = 12.dp, start = 20.dp, end = 20.dp),
                 shape = RoundedCornerShape(16.dp),
-                onClick = { openWebView = true }
+                onClick = {
+                    webViewController.open(url = url)
+                }
             ) {
                 Text("Open WebView")
             }
-        }
-
-        if (openWebView) {
-            openWebView = false
-
-            WebViewPlatform(url = url)
         }
     }
 }

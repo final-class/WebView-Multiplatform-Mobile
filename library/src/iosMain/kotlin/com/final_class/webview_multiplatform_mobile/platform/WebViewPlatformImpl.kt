@@ -2,9 +2,9 @@ package com.final_class.webview_multiplatform_mobile.platform
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.final_class.webview_multiplatform_mobile.library.settings.android.AndroidSettings
-import com.final_class.webview_multiplatform_mobile.library.settings.ios.IosSettings
-import com.final_class.webview_multiplatform_mobile.library.settings.ios.dismiss_button_style.DismissButtonStyle
+import com.final_class.webview_multiplatform_mobile.webview.settings.android.AndroidSettings
+import com.final_class.webview_multiplatform_mobile.webview.settings.ios.IosSettings
+import com.final_class.webview_multiplatform_mobile.webview.settings.ios.dismiss_button_style.DismissButtonStyle
 import platform.Foundation.NSURL
 import platform.SafariServices.SFSafariViewController
 import platform.SafariServices.SFSafariViewControllerConfiguration

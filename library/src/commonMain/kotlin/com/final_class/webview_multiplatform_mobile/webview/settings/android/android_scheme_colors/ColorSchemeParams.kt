@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.android_scheme_colors
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.android_scheme_colors
 
 import androidx.compose.ui.graphics.Color
 

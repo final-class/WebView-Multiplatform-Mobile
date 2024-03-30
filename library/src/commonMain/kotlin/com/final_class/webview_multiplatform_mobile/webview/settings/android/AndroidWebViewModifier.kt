@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android
+package com.final_class.webview_multiplatform_mobile.webview.settings.android
 
 interface AndroidWebViewModifier {
 

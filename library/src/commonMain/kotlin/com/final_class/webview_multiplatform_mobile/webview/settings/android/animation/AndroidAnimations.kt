@@ -1,4 +1,4 @@
-package com.final_class.webview_multiplatform_mobile.library.settings.android.animation
+package com.final_class.webview_multiplatform_mobile.webview.settings.android.animation
 
 /**
  * @param enterResId resource ID of the "enter" animation for the browser.
