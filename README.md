@@ -26,7 +26,11 @@ val webViewController by rememberWebViewController()
 
 WebViewPlatform(webViewController = webViewController)
 
+// Open in application
 webViewController.open(url = "https://github.com/")
+
+// Open in external browser
+webViewController.openInExternalBrowser(url = "https://github.com/")
 ```
 
 ------------
