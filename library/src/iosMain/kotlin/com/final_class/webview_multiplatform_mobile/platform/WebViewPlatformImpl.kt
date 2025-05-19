@@ -28,7 +28,7 @@ internal actual fun WebViewPlatformImpl(
     )
 
     if (openInExternalBrowser) {
-        UIApplication.sharedApplication.openURL(url = nsurl)
+        UIApplication.sharedApplication.openURL(url = nsurl, options = emptyMap<Any?, Any?>(), completionHandler = null)
     } else {
         val viewController = UIApplication.sharedApplication.keyWindow?.rootViewController
         viewController?.presentViewController(safariViewController, animated = true, completion = null)
