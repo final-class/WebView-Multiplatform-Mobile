@@ -92,6 +92,18 @@ fun App() {
             ) {
                 Text("Open WebView")
             }
+
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 12.dp, start = 20.dp, end = 20.dp),
+                shape = RoundedCornerShape(16.dp),
+                onClick = {
+                    webViewController.openInExternalBrowser(url = url)
+                }
+            ) {
+                Text("Open external browser")
+            }
         }
     }
 }
