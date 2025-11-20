@@ -33,6 +33,21 @@ webViewController.open(url = "https://github.com/")
 webViewController.openInExternalBrowser(url = "https://github.com/")
 ```
 
+If you manage the controller outside Compose, create it via factory and pass into `WebViewPlatform`:
+```kotlin
+class SomeViewModel {
+    val webViewController = WebViewControllerFactory.create()
+    
+    fun openWebView() {
+        webViewController.open(url = "https://github.com/")
+    }
+}
+
+// Later in UI
+val viewModel = SomeViewModel()
+WebViewPlatform(webViewController = viewModel.webViewController)
+```
+
 ------------
 
 ### :gear: Settings
