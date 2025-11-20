@@ -20,16 +20,16 @@ internal actual fun WebViewPlatformImpl(
     iosSettings: IosSettings,
 ) {
     val nsurl = NSURL(string = url)
-    val safariConfiguration = createSafariConfiguration(iosSettings = iosSettings)
-    val safariViewController = createSafariViewController(
-        url = nsurl,
-        configuration = safariConfiguration,
-        iosSettings = iosSettings
-    )
 
     if (openInExternalBrowser) {
         UIApplication.sharedApplication.openURL(url = nsurl, options = emptyMap<Any?, Any?>(), completionHandler = null)
     } else {
+        val safariConfiguration = createSafariConfiguration(iosSettings = iosSettings)
+        val safariViewController = createSafariViewController(
+            url = nsurl,
+            configuration = safariConfiguration,
+            iosSettings = iosSettings
+        )
         val viewController = UIApplication.sharedApplication.keyWindow?.rootViewController
         viewController?.presentViewController(safariViewController, animated = true, completion = null)
     }
