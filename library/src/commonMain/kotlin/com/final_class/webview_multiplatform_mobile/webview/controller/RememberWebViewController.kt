@@ -8,5 +8,5 @@ import androidx.compose.runtime.remember
  **/
 @Composable
 fun rememberWebViewController(): WebViewController {
-    return remember { WebViewControllerImpl() }
+    return remember { WebViewControllerFactory.create() }
 }
