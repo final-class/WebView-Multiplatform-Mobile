@@ -35,8 +35,6 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.material)
             implementation(compose.ui)
-            @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
-            implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
 
             /** WebView Multiplatform Mobile **/
