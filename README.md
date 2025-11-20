@@ -18,7 +18,7 @@
 ### :rocket: Setup
 1) Add the dependency to the commonMain section of your build.gradle
 ```java
-implementation("io.github.final-class:webview-multiplatform-mobile:1.2.0")
+implementation("io.github.final-class:webview-multiplatform-mobile:1.3.0")
 ```
 2) Use WebView in your shared code
 ```kotlin
