@@ -1,7 +1,7 @@
 package com.final_class.webview_multiplatform_mobile.webview.controller
 
 import androidx.compose.runtime.State
-import com.final_class.webview_multiplatform_mobile.webview.controller.state.WebViewState
+import com.final_class.webview_multiplatform_mobile.webview.controller.state.WebViewCommand
 import kotlin.properties.ReadOnlyProperty
 
 /**
@@ -9,13 +9,14 @@ import kotlin.properties.ReadOnlyProperty
  **/
 interface WebViewController : ReadOnlyProperty<Nothing?, WebViewController> {
 
-    val webViewState: State<WebViewState>
-
     /** Open in application **/
     fun open(url: String)
 
     /** Open in external browser **/
     fun openInExternalBrowser(url: String)
+}
 
+internal interface InternalWebViewController : WebViewController {
+    val webViewCommand: State<WebViewCommand>
     fun consume()
 }
